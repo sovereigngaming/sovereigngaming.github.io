@@ -1,0 +1,1056 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.content {
+  /* background-color: #14273d; */
+  width: 90vw;
+  margin: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding-top: 22px;
+  /* background: black; */
+  /* background: linear-gradient(90deg, #f0027f, #75489f); */
+  /* background: #320d7f; */
+  /* background-color: #26547c; */
+  background-color: black;
+}
+
+#logo {
+  width: 180px;
+  height: 140px;
+  margin-left: 50px;
+}
+
+.navbar-2 {
+  justify-content: flex-end;
+  /* background: white; */
+  padding-bottom: 30px;
+}
+
+.navbar img {
+  margin: 10px 0 0 10px;
+  position: relative;
+  bottom: 15px;
+}
+
+.navbar ul {
+  /* color: blue; */
+  /* color: red; */
+  width: 40%;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+.navbar ul li a {
+  padding-top: 20px;
+  text-decoration: none;
+  /* color: rgba(0, 0, 255); */
+  /* color: rgb(0, 254, 174); */
+  color: white;
+  opacity: 0.5;
+}
+
+.navbar li a.current {
+  /* border-top: 2px solid rgb(0, 0, 255); */
+  /* border-top: 2px solid rgb(0, 254, 174); */
+  border-top: 2px solid white;
+  opacity: 1;
+}
+
+#subNavbar {
+  border: 2px solid black;
+  background-color: #e8e8e8;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#subNavbar a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  /* color: black; */
+  color: rgb(0, 254, 174);
+  padding: 7px;
+}
+
+#subNavbar a:hover {
+  box-shadow: 10px 10px 28px 0px rgb(0, 254, 174);
+  -webkit-box-shadow: 10px 10px 28px 0px rgb(0, 254, 174);
+  -moz-box-shadow: 10px 10px 28px 0px rgb(0, 254, 174);
+
+  box-shadow: 10px 10px 28px 20px rgb(0, 254, 174);
+  -webkit-box-shadow: 10px 10px 28px 20px rgb(0, 254, 174);
+  -moz-box-shadow: 10px 10px 28px 20px rgb(0, 254, 174);
+  transform: translate(-1px, -1px);
+}
+
+#subNavbar a img {
+  width: 30px;
+  height: 30px;
+}
+
+#subNavbar div.separator {
+  position: relative;
+  float: left;
+  top: 8px;
+  left: 0;
+  width: 2px;
+  height: 35px;
+  background: #c4c4c4;
+  border-right: 1px solid #eaeaea;
+}
+
+.mainGames {
+  position: relative;
+  display: flex;
+  border: 1px solid black;
+  width: 100%;
+  flex-grow: 1;
+  /* background: url(../web1Project/images/mainGamesBackgroundImage.jpg); */
+  /* background: url(../web1Project/images/imperia-online.jpg) center; */
+  background-size: 45.31vw 38.51vh;
+  background-repeat: no-repeat;
+}
+
+.mainGames a {
+  height: calc((100vh / 3) + 72px);
+  width: 27%;
+}
+
+.mainGames a:first-of-type {
+  background-image: url(../web1Project/images/battledudesio.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.mainGames a:nth-of-type(2) {
+  background-image: url(../web1Project/images/happy-racing-online.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* flex-grow: 2; */
+}
+.mainGames a:last-of-type {
+  background-image: url(../web1Project/images/imperia-online.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.mainGames-next {
+  position: absolute;
+  width: 59px;
+  height: 59px;
+  border-radius: 50%;
+  z-index: 2;
+  top: 123px;
+  /* left: 345px; */
+  left: 25%;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+.right {
+  background: url("../web1Project/images/arrow-right.png") no-repeat 0 0;
+  /* left: 965px; */
+  left: 70.5%;
+}
+.left {
+  background: url("../web1Project/images/arrow-left.png") no-repeat 0 0;
+}
+
+.mainGames .structure {
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  border: 10px solid black;
+  height: calc((100vh / 3) + 72px);
+  width: 100%;
+  /* width: 27%; */
+  border-color: #f5f5ff;
+}
+
+.mainGames .structure span {
+  z-index: 4;
+  position: relative;
+  border: 7px solid black;
+  left: 26%;
+  border-color: #f5f5ff;
+}
+.mainGames .structure span:last-of-type {
+  left: 71.5%;
+}
+
+.orderOne {
+  order: 1;
+}
+
+.orderTwo {
+  flex-grow: 2;
+  order: 2;
+}
+
+.orderThree {
+  order: 3;
+}
+
+//Animation Attempt Failed
+/* .imgRight {
+  transform: translate(500px);
+}
+
+.imgLeft {
+  transform: translate(-46vw);
+  transition-duration: 350ms;
+}
+
+.rotate {
+  transform: rotateY(360deg);
+  transition-duration: 500ms;
+} */
+
+#filters {
+  position: relative;
+  display: inline-flex;
+}
+
+.filterStyle {
+  height: 80px;
+}
+
+#filters p {
+  position: relative;
+  top: 30px;
+  font-size: 20px;
+
+  /* height: 100px; */
+}
+
+.btnStyle {
+  position: relative;
+  left: 60px;
+  z-index: 1;
+  width: 250px;
+  height: 40px;
+  border-radius: 50px;
+  margin-left: 15px;
+  border: 1px solid #696969;
+}
+
+.circle {
+  position: absolute;
+  display: inline;
+  left: 130px;
+  z-index: 2;
+  border: 1px solid #696969;
+  background: lightblue;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+}
+
+#filters .circle img {
+  width: 44px;
+  height: 44px;
+}
+
+#filters div.circle:last-of-type {
+  left: 400px;
+}
+
+#gamesTitle {
+  padding: 30px 0 30px 10px;
+  color: #696969;
+}
+
+footer {
+  /* border: 3px solid purple; */
+  height: 90vh;
+  display: flex;
+
+  /* background-color: hsla(352, 4%, 91%, 0.6); */
+}
+
+footer section {
+  position: relative;
+  height: 87vh;
+  width: 60vw;
+  padding-left: 10px;
+  position: relative;
+  overflow-y: hidden;
+}
+
+footer section h2 {
+  margin: 20px 0 20px 25px;
+}
+
+#actionGamesContainer-Container {
+  /* width: 100%;
+  height: 100%;
+  overflow: hidden; */
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+
+#actionGamesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* width: 90%;
+  height: 86%; */
+  /* position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 17px;
+  box-sizing: content-box; */
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: -15px;
+  overflow: auto;
+}
+
+.emptyDiv {
+  width: 100%;
+  height: 70px;
+}
+
+footer section img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* opacity: 0.6; */
+  /* background-image: url("https://assets.digitalocean.com/labs/images/community_bg.png"); */
+  /* background-repeat: no-repeat; */
+  /* background-position: 50% 0; */
+  background-size: cover;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+footer aside {
+  width: 30%;
+  height: 87vh;
+  margin-left: 35px;
+  overflow-y: scroll;
+  background: rgb(46, 3, 17);
+  background: linear-gradient(
+    270deg,
+    rgba(46, 3, 17, 1) 0%,
+    rgba(0, 0, 0, 1) 94%
+  );
+}
+
+footer aside div {
+  /* border: 1px solid blue; */
+  border-radius: 10%;
+  /* width: 70%; */
+  /* height: 25%; */
+  margin: 20px;
+}
+
+footer aside h2 {
+  margin: 20px 0 20px 15px;
+  color: white;
+}
+
+.maindivCardsStyle {
+  /* border: 1px solid blue; */
+  border-radius: 15%;
+  /* width: 185px; */
+  /* height: 190px; */
+  width: 200px;
+  height: 220px;
+  margin: 10px 2px 10px 2px;
+  background-size: 200px 150px;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  -webkit-box-shadow: -2px 5px 10px 1px rgba(0, 0, 0, 0.46);
+  box-shadow: -2px 5px 10px 1px rgba(0, 0, 0, 0.46);
+  cursor: pointer;
+}
+
+.maindivCardsStyle:hover {
+  box-shadow: 4px 7px 17px 3px rgba(0, 0, 0, 0.61);
+  -webkit-box-shadow: 4px 7px 17px 3px rgba(0, 0, 0, 0.61);
+  -moz-box-shadow: 4px 7px 17px 3px rgba(0, 0, 0, 0.61);
+  opacity: 0.8;
+  transform: translateX(2px) translateY(2px);
+}
+
+.divGamesLinkStyle {
+  color: black;
+  text-decoration: none;
+}
+
+.subdivCardsStyle {
+  /* border: 1px solid orange; */
+  /* border-radius: 15%; */
+  width: 200px;
+  height: 70px;
+  padding-left: 5px;
+  /* white-space: nowrap; */
+
+  /* background-color: #f8ffe5; */
+}
+
+.subdivHeadLine {
+  margin: 3px 0px 3px 5px;
+  font-size: 17px;
+}
+
+.subdivDescription {
+  margin: 3px 0px 3px 5px;
+  /* color: rgba(216, 199, 199); */
+  color: rgb(126, 115, 115);
+  font-weight: bolder;
+  font-size: 16px;
+}
+
+.subdivSpan {
+  margin: 3px 0px 3px 5px;
+}
+
+.checked {
+  color: #ff9529;
+}
+
+.unchecked {
+  color: rgb(220, 219, 219);
+}
+
+.rightSideMainDivCardsStyle {
+  /* border: 1px solid orangered; */
+  border-radius: 5%;
+  width: 21.962vw;
+  height: 130px;
+  background-size: 19.766vw 130px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  -webkit-box-shadow: -2px 5px 10px 1px rgba(0, 0, 0, 0.46);
+  box-shadow: -2px 5px 10px 1px rgba(0, 0, 0, 0.46);
+  background-color: rgb(34, 32, 32);
+  cursor: pointer;
+}
+
+.rightSideMainDivCardsStyle:hover {
+  opacity: 0.8;
+}
+
+.rightSideSubSivCardsStyle {
+  display: flex;
+  align-items: center;
+  margin-bottom: 130px;
+  height: 130px;
+  width: 2.196vw;
+  margin: 0;
+}
+
+.rightSideSubSivSpan {
+  margin: 20%;
+}
+
+.main-info {
+  height: calc(100vh - 70px);
+}
+
+.main-info-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 155px);
+  /* background: linear-gradient(90deg, #f0027f, #75489f); */
+  background: linear-gradient(90deg, rgb(51, 51, 52), rgb(79, 99, 125));
+  position: relative;
+}
+
+div.contactUsCard {
+  color: white;
+  border-radius: 15px;
+  margin-left: 30px;
+  background-image: linear-gradient(
+    495deg,
+    rgb(62, 75, 92) 10%,
+    rgb(60, 80, 104) 25%,
+    rgb(139, 142, 145) 92%
+  );
+  line-height: 1.6;
+  width: 500px;
+  height: 550px;
+  padding: 60px;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+  box-shadow: 3px 3px 14px 4px rgb(84 102 125);
+  margin-top: 30px;
+  position: relative;
+  z-index: 2;
+  top: 40px;
+}
+
+.contact-info {
+  font-size: 16px;
+  margin-bottom: 5px;
+  padding-left: 15px;
+  /* position: relative;
+  z-index: 2; */
+}
+
+.contact-info h6 {
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+div.contactUsCard p {
+  margin-bottom: 25px;
+}
+
+.contactUs-heading {
+  margin-bottom: 25px;
+}
+
+.contactUsCard h6 {
+  text-transform: uppercase;
+  color: rgb(164, 185, 212);
+  margin-bottom: 3px;
+}
+
+.contactUsCard img {
+  width: 30px;
+  color: white;
+}
+
+.flex-info-icon {
+  display: flex;
+  align-items: flex-start;
+}
+
+.contactUs-heading h6 span {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgb(107, 151, 208);
+
+  margin-right: 7px;
+}
+
+.contactUs-heading h6 {
+  color: white;
+  font-size: 14px;
+}
+
+.contactUs-heading h2 {
+  font-size: 36px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 300px 0 50px;
+  margin: 70px;
+  width: 570px;
+  height: 430px;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.contact-form h2 {
+  width: 100%;
+}
+
+.contact-form h6 {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #a5b7d2;
+}
+.contact-form h6 span {
+  margin-right: 7px;
+  border-radius: 50%;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: #a5b7d2;
+}
+
+.contact-form form input {
+  border-radius: 15px;
+  color: #7e7e7e;
+  border: 1px solid #e6e6e6;
+  padding: 9px 20px;
+  width: 100%;
+  height: 45px;
+  margin-bottom: 30px;
+  outline: none;
+}
+
+.contact-form form textarea {
+  height: 120px;
+  width: 100%;
+  color: #7e7e7e;
+  border: 1px solid #e6e6e6;
+  padding: 15px 20px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.contact-form form button {
+  color: white;
+  background-color: rgb(92, 97, 104);
+  border-radius: 40px;
+  width: 220px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-footer {
+  flex-direction: column;
+  position: relative;
+}
+
+.contact-footer-header {
+  display: flex;
+  height: 40vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.contact-mini-cards {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  /* background-color: #9370db; */
+  background: rgb(58, 75, 99);
+}
+
+.contact-mini-cards div {
+  background-color: white;
+  width: 200px;
+  height: 210px;
+  display: flex;
+  padding: 15px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-mini-cards h3 {
+  text-align: center;
+  font-size: 25px;
+  line-height: 1.6;
+}
+
+.contact-mini-cards p {
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #3e4854;
+  text-align: center;
+}
+
+.contact-mini-cards span {
+  display: inline-block;
+  width: 37px;
+  height: 37px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.contact-mini-cards span:hover {
+  border: 1px solid black;
+}
+
+.contact-mini-cards span img {
+  width: 30px;
+  margin-top: 2px;
+  margin-left: 6px;
+}
+
+.custom-shape-divider-bottom-1620479125 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1620479125 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 75px;
+}
+
+.custom-shape-divider-bottom-1620479125 .shape-fill {
+  fill: #fff;
+}
+
+/* aboutus */
+
+.aboutus-section {
+  font-family: Verdana, Helvetica, Tahoma;
+  display: flex;
+  justify-content: center;
+  height: calc(100vh - 70px);
+  /* background: url("../web1Project/images/aboutusbackground7.jpg") no-repeat; */
+  /* background-size: 100% 100%; */
+}
+
+.aboutus-header-style {
+  background-color: black;
+  color: white;
+  width: 70%;
+  background-image: linear-gradient(90deg, rgb(37, 37, 38), rgb(47, 57, 70));
+}
+
+.aboutus-card {
+  box-sizing: border-box;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  background-color: black;
+  width: 50%;
+  height: 50%;
+  padding: 30px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.aboutus-card h2 {
+  margin-bottom: 20px;
+  border-bottom: 1px solid white;
+}
+
+.aboutcard2 {
+  /* border-top: 1px solid white; */
+  margin: 0 0 0 50%;
+}
+
+.aboutus-footer {
+  border: 1px solid black;
+  height: 100vh;
+  font-family: Verdana, Helvetica, Tahoma;
+  line-height: 1.6;
+}
+
+.aboutus-footer-style {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.aboutus-footer-style h2 {
+  margin: 0 0 20px 40px;
+  border-bottom: 1px solid white;
+}
+
+.aboutus-footer-style p {
+  padding: 0 40px 0 40px;
+}
+
+.center {
+  margin: auto;
+  width: 70%;
+}
+
+@media screen and (max-width: 882px) {
+  #subNavbar a {
+    width: 90px;
+  }
+
+  #subNavbar {
+    flex-wrap: wrap;
+  }
+
+  footer {
+    height: 100vh;
+    flex-direction: column-reverse;
+  }
+
+  footer aside {
+    width: 100%;
+    height: 33vh;
+    margin: 0 0 25px 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer aside h2 {
+    display: none;
+  }
+
+  .rightSideSubSivCardsStyle {
+    margin-bottom: 0px;
+    width: 130px;
+    height: 2.196vw;
+  }
+
+  .rightSideMainDivCardsStyle {
+    width: 24.962vw;
+    height: 130px;
+    background-size: 24.962vw 110px;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  footer section {
+    height: 70vh;
+    width: 100%;
+  }
+
+  footer section h2 {
+    margin: 20px 0 20px 25px;
+  }
+
+  /* Contact Us */
+
+  .navbar-2 {
+    justify-content: center;
+  }
+
+  .contact-mini-cards div {
+    width: 180px;
+    height: 190px;
+  }
+
+  .contact-mini-cards h3 {
+    font-size: 21px;
+  }
+
+  .contact-mini-cards p {
+    margin-top: 25px;
+    font-size: 14px;
+  }
+
+  .contact-mini-cards span {
+    width: 34px;
+    height: 34px;
+  }
+
+  .contact-mini-cards span img {
+    width: 27px;
+  }
+}
+
+@media screen and (max-width: 1125px) {
+  .circle {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 755px) {
+  .main-info {
+    height: 80vh;
+  }
+  .main-info-wrapper {
+    position: static;
+  }
+
+  div.contactUsCard {
+    width: 300px;
+    height: 350px;
+    padding: 35px;
+    font-size: 16px;
+    margin-left: 20px;
+    position: static;
+  }
+
+  .contactUs-heading h2 {
+    display: none;
+  }
+
+  .contact-info {
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+  }
+
+  .contact-info h6 {
+    font-size: 14px;
+  }
+
+  div.contactUsCard > p {
+    display: none;
+  }
+
+  .contactUsCard img {
+    width: 25px;
+  }
+
+  .contactUs-heading h6 span {
+    width: 5px;
+    height: 5px;
+    margin-right: 5px;
+  }
+
+  .contactUs-heading h6 {
+    font-size: 13px;
+  }
+
+  .contactUs-heading h2 {
+    font-size: 32px;
+  }
+
+  .contact-form h6 {
+    display: none;
+  }
+
+  .contact-form h2 {
+    font-size: 20px;
+  }
+
+  .contact-form {
+    height: 380px;
+  }
+
+  .contact-form form input {
+    height: 38px;
+    margin-bottom: 20px;
+  }
+
+  .contact-form form textarea {
+    height: 80px;
+  }
+
+  .contact-form form button {
+    color: white;
+    background-color: rgb(92, 97, 104);
+    border-radius: 40px;
+    width: 110px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  footer {
+    height: 130vh;
+  }
+
+  footer aside {
+    width: 100%;
+    height: 60vh;
+    margin: 0 0 25px 0;
+    flex-direction: column;
+  }
+
+  .rightSideSubSivCardsStyle {
+    margin-bottom: 0px;
+    width: 130px;
+    height: 2.196vw;
+  }
+
+  .rightSideMainDivCardsStyle {
+    width: 70%;
+    height: 190px;
+    margin: 0;
+    background-size: 100% 105px;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  footer section {
+    height: 70vh;
+    width: 100%;
+  }
+
+  #filters {
+    position: static;
+    display: flex;
+    justify-content: center;
+  }
+
+  .filterStyle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 120px;
+  }
+
+  #filters p {
+    position: static;
+    font-size: 20px;
+    margin: 5px 0;
+  }
+
+  .btnStyle {
+    position: static;
+    width: 300px;
+    height: 260px;
+    margin: 0 0 10px 15px;
+    border: 1px solid #696969;
+  }
+
+  footer.contact-footer {
+    height: 95vh;
+  }
+
+  div.contact-mini-cards {
+    /* height: 100%; */
+  }
+
+  div.contact-footer-header h2 {
+    font-size: 30px;
+  }
+
+  .contact-mini-cards div {
+    width: 140px;
+    height: 80%;
+  }
+
+  .contactUsCard {
+    display: none;
+  }
+
+  .custom-shape-divider-bottom-1620479125 {
+    display: none;
+  }
+
+  .navbar-2 {
+    /* height: 500px; */
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    flex-direction: column;
+  }
+
+  .navbar-2 ul {
+    width: 100%;
+  }
+}
