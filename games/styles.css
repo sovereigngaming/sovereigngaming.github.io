@@ -133,18 +133,18 @@ html {
 }
 
 .mainGames a:first-of-type {
-  background-image: url(../web1Project/images/battledudesio.jpg);
+  background-image: url(../games/images/battledudesio.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 .mainGames a:nth-of-type(2) {
-  background-image: url(../web1Project/images/happy-racing-online.jpg);
+  background-image: url(../games/images/happy-racing-online.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   /* flex-grow: 2; */
 }
 .mainGames a:last-of-type {
-  background-image: url(../web1Project/images/imperia-online.jpg);
+  background-image: url(../games/images/imperia-online.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -164,12 +164,12 @@ html {
 }
 
 .right {
-  background: url("../web1Project/images/arrow-right.png") no-repeat 0 0;
+  background: url("../games/images/arrow-right.png") no-repeat 0 0;
   /* left: 965px; */
   left: 70.5%;
 }
 .left {
-  background: url("../web1Project/images/arrow-left.png") no-repeat 0 0;
+  background: url("../games/images/arrow-left.png") no-repeat 0 0;
 }
 
 .mainGames .structure {
