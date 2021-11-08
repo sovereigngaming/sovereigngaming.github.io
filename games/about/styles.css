@@ -26,6 +26,145 @@ html {
   background-color: black;
 }
 
+.fabulousArrows {
+  /* color: white; */
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  /* border: 2px solid blue; */
+  width: 110px;
+  height: 50px;
+  top: 10%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.fabulousArrows span {
+  width: 30px;
+  height: 30px;
+  border-top: 5px solid #0066cc;
+  border-right: 5px solid #0066cc;
+  transform: rotate(45deg);
+  animation: scroll 2s infinite;
+}
+
+.fabulousArrows span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.fabulousArrows span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+.hide {
+  display: hidden;
+}
+
+.note {
+  /* display: none; */
+  position: absolute;
+  top: 9%;
+  left: 40%;
+  height: 50px;
+  width: 50px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: black;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: rgb(231, 229, 229);
+  width: 300px;
+  max-width: 80%;
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  color: white;
+  background-color: black;
+}
+
+.modal-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.modal-header .modal-close {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+.modal-body a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+#overlay {
+  position: fixed;
+  z-index: 9;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
 #logo {
   width: 180px;
   height: 140px;
@@ -133,18 +272,18 @@ html {
 }
 
 .mainGames a:first-of-type {
-  background-image: url(../games/images/battledudesio.jpg);
+  background-image: url(../web1Project/images/battledudesio.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
 .mainGames a:nth-of-type(2) {
-  background-image: url(../games/images/happy-racing-online.jpg);
+  background-image: url(../web1Project/images/happy-racing-online.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   /* flex-grow: 2; */
 }
 .mainGames a:last-of-type {
-  background-image: url(../games/images/imperia-online.jpg);
+  background-image: url(../web1Project/images/imperia-online.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 }
@@ -164,12 +303,12 @@ html {
 }
 
 .right {
-  background: url("../games/images/arrow-right.png") no-repeat 0 0;
+  background: url("../web1Project/images/arrow-right.png") no-repeat 0 0;
   /* left: 965px; */
   left: 70.5%;
 }
 .left {
-  background: url("../games/images/arrow-left.png") no-repeat 0 0;
+  background: url("../web1Project/images/arrow-left.png") no-repeat 0 0;
 }
 
 .mainGames .structure {

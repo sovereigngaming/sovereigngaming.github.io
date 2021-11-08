@@ -7,18 +7,42 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Games at sovereignGaming - Play Free Online Games</title>
+    
 </head>
 <body>
 
     <nav class="navbar">
 
-            <img id="logo" src="../games/images/logoeigthEdition.png" alt="">
+            <img id="logo" src="../web1Project/images/logoeigthEdition.png" alt="">
 
         <ul>
             <li><a class="current" href="games.html">Games</a></li>      
             <li><a href="about.html">About Us</a></li>
             <li><a href="contact.html">Contact Us</a></li>
         </ul>
+
+        <div class="fabulousArrows" >
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+            <button data-modal-target="#modal" class="note">Note</button>
+            
+            <div class="modal" id="modal">
+                <div class="modal-header">
+                    <div class="modal-title">Summary</div>
+                    <button data-modal-close class="modal-close">&times;</button>
+                </div>
+            
+                <div class="modal-body">
+                    This non responsive website was made as a first project after learning the basics of HTML CSS and JS it is made from scratch along with the games Snake and MineSweeper which can be found in the Kids and Strategy categories. 
+                </br>
+                    It is meant as a demonstration of my capabilities as of Nov 2021. For more details on the project I have included the <a href="readMe.txt" target="_blank">readMe</a> file
+                </div>
+            </div>
+            
+                <div id="overlay"></div>
     </nav>
 
     <div class="content">
@@ -138,7 +162,7 @@
         <footer>
             <section>
                 <h2 class="showCategoryName">Car Games</h2>
-                <img src="../games/images/backgroundMainImages/car.jpg" alt="">
+                <img src="../web1Project/images/backgroundMainImages/car.jpg" alt="">
                 <div id="actionGamesContainer-Container">
                     <div id="actionGamesContainer">
                     </div>

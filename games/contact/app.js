@@ -140,8 +140,8 @@ function createGameCards(gameIndex, categoryTitle) {
             description.classList.add('subdivDescription');
             starHolder.classList.add('subdivSpan');
 
-            newDiv.style.backgroundImage = `url('../games/images/${categoryTitle}/${categoryTitle}${gameIndex+1}.jfif')`;
-            link.setAttribute("href", `../games/images/${categoryTitle}/${category[categoryTitle][gameIndex][0]}/${category[categoryTitle][gameIndex][0]}.html`);
+            newDiv.style.backgroundImage = `url('../web1Project/images/${categoryTitle}/${categoryTitle}${gameIndex+1}.jfif')`;
+            link.setAttribute("href", `../web1Project/images/${categoryTitle}/${category[categoryTitle][gameIndex][0]}/${category[categoryTitle][gameIndex][0]}.html`);
             link.setAttribute("target", "_blank");
 
             
@@ -184,7 +184,7 @@ let actionGamesBackground = document.querySelector('footer section img');
                 let allSideNewDivs = document.querySelectorAll('#randomSideGamesContainer div.rightSideMainDivCardsStyle'); 
                 removeGameCards(allSideNewDivs, 3);
                 createRandomCards(categoryTitle);
-                actionGamesBackground.src = `../games/images/backgroundMainImages/${categoryTitle}.jpg`;
+                actionGamesBackground.src = `../web1Project/images/backgroundMainImages/${categoryTitle}.jpg`;
 
 
     });
@@ -220,8 +220,8 @@ function createRandomCards(categoryTitle = 'car', numberOfCards = 3) {
         subDiv.classList.add('rightSideSubSivCardsStyle');
         starHolder.classList.add('rightSideSubSivSpan');
 
-        newDiv.style.backgroundImage = `url('../games/images/${categoryTitle}/${categoryTitle}${randomGameIndex+1}.jfif')`;
-        link.setAttribute("href", `../games/images/${categoryTitle}/${category[categoryTitle][randomGameIndex][0]}/${category[categoryTitle][randomGameIndex][0]}.html`);
+        newDiv.style.backgroundImage = `url('../web1Project/images/${categoryTitle}/${categoryTitle}${randomGameIndex+1}.jfif')`;
+        link.setAttribute("href", `../web1Project/images/${categoryTitle}/${category[categoryTitle][randomGameIndex][0]}/${category[categoryTitle][randomGameIndex][0]}.html`);
         link.setAttribute("target", "_blank");
         
 
@@ -230,5 +230,53 @@ function createRandomCards(categoryTitle = 'car', numberOfCards = 3) {
 
 createRandomCards();
 
+//Modal
+const openModalButtons = document.querySelectorAll('[data-modal-target]');
+const closeModalButtons = document.querySelectorAll('[data-modal-close]');
+const overlay = document.getElementById('overlay');
 
-// setting links for minesweeper and snake
+const fabulousArrows = document.querySelector('.fabulousArrows'); 
+
+openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget);
+    openModal(modal);
+})
+})
+
+overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active');
+    modals.forEach(modal => {
+        removeModalandArrows();
+        closeModal(modal);
+    })
+})
+
+closeModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+    const modal = button.closest('#modal');
+    removeModalandArrows();
+    closeModal(modal);
+    })
+})
+
+function openModal(modal) {
+    if(modal == null) return;
+    modal.classList.add('active');
+    overlay.classList.add('active');
+}
+
+function closeModal(modal) {
+    if(modal == null) return;
+    modal.classList.remove('active');
+    overlay.classList.remove('active');
+}
+
+function removeModalandArrows() { 
+    
+    openModalButtons.forEach(button => {
+        button.style.display = "none";
+})
+
+    fabulousArrows.style.display = "none";
+}
